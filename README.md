@@ -24,6 +24,7 @@
 
  * Adapter
 
+    ```java
      @Override
      public ClickableViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
      {
@@ -49,65 +50,63 @@
          super.onBindViewHolder(holder, position);
      }
 
+     * Activity
 
+               //初始化RecycleView
+               mRecyclerView = (RecyclerView) findViewById(R.id.recycle_view);
+               assert mRecyclerView != null;
+               mRecyclerView.setHasFixedSize(true);
 
- * Activity
+               //设置LayoutManager
+               LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this);
+               mRecyclerView.setLayoutManager(mLinearLayoutManager);
 
-       <pre><code>
-          //初始化RecycleView
-          mRecyclerView = (RecyclerView) findViewById(R.id.recycle_view);
-          assert mRecyclerView != null;
-          mRecyclerView.setHasFixedSize(true);
+               //设置分割线
+               //mRecyclerView.addItemDecoration(new EasyDividerItemDecoration(this ,EasyDividerItemDecoration.VERTICAL_LIST));
 
-          //设置LayoutManager
-          LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this);
-          mRecyclerView.setLayoutManager(mLinearLayoutManager);
+               //创建Adapter
+               mRecycleAdapter = new RecycleAdapter(mRecyclerView, datas);
 
-          //设置分割线
-          //mRecyclerView.addItemDecoration(new EasyDividerItemDecoration(this ,EasyDividerItemDecoration.VERTICAL_LIST));
+               //使用EasyAdapter包装一层 添加头部 尾部
+               EasyRecycleAdapter mEasyRecycleAdapter = new EasyRecycleAdapter(mRecycleAdapter);
 
-          //创建Adapter
-          mRecycleAdapter = new RecycleAdapter(mRecyclerView, datas);
+               //添加头部
+               createHead();
+               mEasyRecycleAdapter.addHeaderView(headView);
 
-          //使用EasyAdapter包装一层 添加头部 尾部
-          EasyRecycleAdapter mEasyRecycleAdapter = new EasyRecycleAdapter(mRecycleAdapter);
+               //添加尾部 上拉加载更多
+               createFoot();
+               mEasyRecycleAdapter.addFooterView(footView);
 
-          //添加头部
-          createHead();
-          mEasyRecycleAdapter.addHeaderView(headView);
+               //设置适配器
+               mRecyclerView.setAdapter(mEasyRecycleAdapter);
 
-          //添加尾部 上拉加载更多
-          createFoot();
-          mEasyRecycleAdapter.addFooterView(footView);
+               //添加Scroll监听 上拉加载更多数据
+               mRecyclerView.addOnScrollListener(new EasyRecycleOnScrollListener(mLinearLayoutManager)
+               {
 
-          //设置适配器
-          mRecyclerView.setAdapter(mEasyRecycleAdapter);
+                   @Override
+                   public void onLoadMore(int currentPage)
+                   {
+                       //这里是上拉更多数据的逻辑
+                       page++;
+                       loadMoreData();
+                   }
+               });
 
-          //添加Scroll监听 上拉加载更多数据
-          mRecyclerView.addOnScrollListener(new EasyRecycleOnScrollListener(mLinearLayoutManager)
-          {
+               //设置item点击事件
+               mRecycleAdapter.setOnItemClickListener(new EasyBaseRecycleViewAdapter.OnItemClickListener()
+               {
 
-              @Override
-              public void onLoadMore(int currentPage)
-              {
-                  //这里是上拉更多数据的逻辑
-                  page++;
-                  loadMoreData();
-              }
-          });
+                   @Override
+                   public void onItemClick(int position, EasyBaseRecycleViewAdapter.ClickableViewHolder holder)
+                   {
 
-          //设置item点击事件
-          mRecycleAdapter.setOnItemClickListener(new EasyBaseRecycleViewAdapter.OnItemClickListener()
-          {
+                       Toast.makeText(MainActivity.this, datas.get(position), Toast.LENGTH_SHORT).show();
+                   }
+               });
+     ```
 
-              @Override
-              public void onItemClick(int position, EasyBaseRecycleViewAdapter.ClickableViewHolder holder)
-              {
-
-                  Toast.makeText(MainActivity.this, datas.get(position), Toast.LENGTH_SHORT).show();
-              }
-          });
-          </code></pre>
 
 
 
