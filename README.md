@@ -24,7 +24,6 @@
 
  * Adapter
 
-    ```java
      @Override
      public ClickableViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
      {
