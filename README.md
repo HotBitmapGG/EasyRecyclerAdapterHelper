@@ -49,7 +49,7 @@
          }
          super.onBindViewHolder(holder, position);
      }
-     ```
+
 
 
  * Activity
@@ -109,6 +109,8 @@
               }
           });
           </code></pre>
+
+
 
 
   ## Other
