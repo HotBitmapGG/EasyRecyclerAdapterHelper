@@ -54,7 +54,7 @@
 
  * Activity
 
-       ```java
+       <pre><code>
           //初始化RecycleView
           mRecyclerView = (RecyclerView) findViewById(R.id.recycle_view);
           assert mRecyclerView != null;
@@ -108,8 +108,7 @@
                   Toast.makeText(MainActivity.this, datas.get(position), Toast.LENGTH_SHORT).show();
               }
           });
-          ```
-          ```
+          </code></pre>
 
 
   ## Other
