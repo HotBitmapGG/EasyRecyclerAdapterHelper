@@ -10,10 +10,11 @@
 
 ## 使用说明
 
- * 继承EasyBaseRecycleViewAdapter
- public class RecycleAdapter extends EasyBaseRecycleViewAdapter
+ * 首先用您的RecycleAdapter继承EasyBaseRecycleViewAdapter
 
- * 代码中使用
+ * public class RecycleAdapter extends EasyBaseRecycleViewAdapter
+
+ * Adapter
 
     ```java
      @Override
@@ -101,18 +102,6 @@
           });
 
           ```
-
-  * XML
-
-  ```
-      <android.support.v7.widget.RecyclerView
-          android:id="@+id/recycle_view"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:clipToPadding="false"
-          android:overScrollMode="never"
-          android:paddingTop="@dimen/activity_horizontal_margin" />
-  ```
 
 
   ## Other
