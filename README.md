@@ -2,11 +2,19 @@
 
 一个简单实用的RecycleViewAdapter帮助库
 
+
+## 简介
+ * 1.RecycleView的OnItemClick,OnItemLongClick的点击事件
+ * 2.RecycleView的Item动画,默认实现了一种动画效果,可自行扩展
+ * 3.添加头部尾部,分割线
+ * 4.列表和表格布局的上拉加载更多
+
 ## 截图
 
 ![](https://github.com/HotBitmapGG/EasyRecycleAdapterHelper/blob/master/pic/01.gif?raw=true)
 
 ![](https://github.com/HotBitmapGG/EasyRecycleAdapterHelper/blob/master/pic/02.gif?raw=true)
+
 
 ## 使用说明
 
