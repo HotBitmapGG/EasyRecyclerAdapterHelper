@@ -35,7 +35,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.HotBitmapGG:EasyRecycleAdapterHelper:V1.0'
+	        compile 'com.github.HotBitmapGG:EasyRecycleAdapterHelper:V1.1'
 	}
  ```
 
@@ -145,6 +145,8 @@ Step 2. Add the dependency
   * 圆环进度条:https://github.com/HotBitmapGG/RingProgressBar
 
   * 安卓学习代码练习:https://github.com/HotBitmapGG/AndroidEveryDayPractice
+  
+  * 轻量级的RecycleViewAdapter辅助类库 :https://github.com/HotBitmapGG/EasyRecycleAdapterHelper
 
   ## License
 
