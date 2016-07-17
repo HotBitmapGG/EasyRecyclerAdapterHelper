@@ -18,13 +18,13 @@
 
 ## 使用说明
 
- * 首先用您的RecycleAdapter继承EasyBaseRecycleViewAdapter
 
- * public class RecycleAdapter extends EasyBaseRecycleViewAdapter
+## Demo
 
- * Adapter
+  ```java
 
-    ```java
+    * Adapter
+
      @Override
      public ClickableViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
      {
