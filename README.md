@@ -11,9 +11,7 @@
 
 ## 截图
 
-![](https://github.com/HotBitmapGG/EasyRecycleAdapterHelper/blob/master/pic/01.gif?raw=true)
-
-![](https://github.com/HotBitmapGG/EasyRecycleAdapterHelper/blob/master/pic/02.gif?raw=true)
+<a href="art/01.gif"><img src="art/01.gif" width="40%"/></a> <a href="art/02.gif"><img src="art/02.gif" width="40%"/></a>
 
 
 ## 使用说明
@@ -144,7 +142,7 @@ Step 2. Add the dependency
 
   * 圆环进度条:https://github.com/HotBitmapGG/RingProgressBar
 
-  * 安卓学习代码练习:https://github.com/HotBitmapGG/AndroidEveryDayPractice
+  * 仿芝麻信用圆环进度:https://github.com/HotBitmapGG/CreditSesameRingView
   
   * 轻量级的RecycleViewAdapter辅助类库 :https://github.com/HotBitmapGG/EasyRecycleAdapterHelper
 
