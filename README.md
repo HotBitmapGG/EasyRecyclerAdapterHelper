@@ -129,8 +129,9 @@ Step 2. Add the dependency
 ```
 
 
+***
 
-  ## Other
+## Other
 
   * 知了日报客户端: https://github.com/HotBitmapGG/RxZhiHu
 
@@ -146,7 +147,7 @@ Step 2. Add the dependency
   
   * 轻量级的RecycleViewAdapter辅助类库 :https://github.com/HotBitmapGG/EasyRecycleAdapterHelper
 
-  ## License
+## License
 
    Copyright 2016 HotBitmapGG
 
